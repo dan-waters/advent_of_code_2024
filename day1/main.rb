@@ -1,7 +1,6 @@
 require 'open-uri'
 
-list1= []
-
+list1 = []
 list2 = []
 
 open(__dir__ + '/input.txt').readlines(chomp: true).each do |line|
