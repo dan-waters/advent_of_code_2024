@@ -1,11 +1,6 @@
 require 'open-uri'
 require_relative 'coordinate'
 
-directions = [:up, :down, :left, :right, :up_left, :up_right, :down_left, :down_right]
-TARGET = 'XMAS'
-
-# Part 1
-
 puzzle = {}
 
 open(__dir__ + '/input.txt').readlines(chomp: true).each_with_index do |line, y|
@@ -14,6 +9,11 @@ open(__dir__ + '/input.txt').readlines(chomp: true).each_with_index do |line, y|
     puzzle[coord] = char
   end
 end
+
+# Part 1
+
+directions = [:up, :down, :left, :right, :up_left, :up_right, :down_left, :down_right]
+TARGET = 'XMAS'
 
 def check_direction(direction, starting_coord, puzzle)
   coord = starting_coord
